@@ -1,4 +1,4 @@
-# cobrador
+# Cobrador Fschmtz
 
 Aplicativo usado para controle de empréstimos e dívidas.
 
