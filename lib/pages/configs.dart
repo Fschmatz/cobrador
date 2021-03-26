@@ -4,7 +4,6 @@ import '../util/versaoNomeChangelog.dart';
 import 'package:provider/provider.dart';
 import 'configsPages/about.dart';
 import 'configsPages/changelog.dart';
-import 'configsPages/tutorial.dart';
 
 class Configs extends StatefulWidget {
   @override
@@ -54,24 +53,6 @@ class _ConfigsState extends State<Configs> {
                 margin: const EdgeInsets.all(0.5),
                 child: Column(
                   children: <Widget>[
-                    ListTile(
-                      leading: Icon(Icons.text_snippet_outlined),
-                      trailing: Icon(Icons.keyboard_arrow_right),
-                      title: Text(
-                        "Tutorial",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      onTap: () {
-
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute<void>(
-                              builder: (BuildContext context) =>
-                                  Tutorial(),
-                              fullscreenDialog: true,
-                            ));
-                      },
-                    ),
                     ListTile(
                       leading: Icon(Icons.text_snippet_outlined),
                       trailing: Icon(Icons.keyboard_arrow_right),

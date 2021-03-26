@@ -55,7 +55,6 @@ class _EmprestimosPGState extends State<EmprestimosPG> {
         nota: notaModal);
 
     showModalBottomSheet(
-        //backgroundColor: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               topLeft: const Radius.circular(15.0),
@@ -65,7 +64,6 @@ class _EmprestimosPGState extends State<EmprestimosPG> {
         context: context,
         builder: (BuildContext bc) {
           return Container(
-            //height: MediaQuery.of(context).size.height * 0.47,
 
             //AJEITA TAMANHO CONFORME SE HOUVER TEM NOTA
             height: notaModal.isNotEmpty
@@ -102,7 +100,6 @@ class _EmprestimosPGState extends State<EmprestimosPG> {
                                     ),
                                     fullscreenDialog: true,
                                   ));
-                              //Navigator.of(context).pop();
                             },
                             icon: Icon(Icons.edit_outlined),
                           ),
@@ -162,14 +159,11 @@ class _EmprestimosPGState extends State<EmprestimosPG> {
                         ),
                       ])
                     ]),
-                //SizedBox(height: 30,),
               ],
             ),
           );
         });
   }
-
-  //DIALOG ADD VALOR MANUAL DEVERA SER FEITO JUNTO COM O EDITAR
 
   @override
   Widget build(BuildContext context) {
@@ -180,7 +174,6 @@ class _EmprestimosPGState extends State<EmprestimosPG> {
             //ITENS
             Expanded(
               child: ListView.builder(
-                //shrinkWrap: true,
                 padding: const EdgeInsets.fromLTRB(3, 10, 3, 10),
                 itemCount: listaEmprestimos.length,
 
@@ -238,7 +231,6 @@ class _EmprestimosPGState extends State<EmprestimosPG> {
         heroTag: null,
         elevation: 1.0,
         onPressed: () {
-          //Navigator.of(context).pop();
           Navigator.push(
               context,
               MaterialPageRoute<void>(

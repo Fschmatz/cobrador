@@ -57,7 +57,6 @@ class _DividasPGState extends State<DividasPG> {
         nota: notaModal);
 
     showModalBottomSheet(
-        //backgroundColor: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               topLeft: const Radius.circular(15.0),
@@ -67,7 +66,6 @@ class _DividasPGState extends State<DividasPG> {
         context: context,
         builder: (BuildContext bc) {
           return Container(
-            //height: MediaQuery.of(context).size.height * 0.47,
 
             //AJEITA TAMANHO CONFORME SE HOUVER TEM NOTA
             height: notaModal.isNotEmpty
@@ -163,14 +161,11 @@ class _DividasPGState extends State<DividasPG> {
                         ),
                       ])
                     ]),
-                //SizedBox(height: 30,),
               ],
             ),
           );
         });
   }
-
-  //DIALOG ADD VALOR MANUAL DEVERA SER FEITO JUNTO COM O EDITAR
 
   @override
   Widget build(BuildContext context) {
@@ -181,7 +176,6 @@ class _DividasPGState extends State<DividasPG> {
             //ITENS
             Expanded(
               child: ListView.builder(
-                //shrinkWrap: true,
                 padding: const EdgeInsets.fromLTRB(3, 10, 3, 10),
                 itemCount: listaDividas.length,
                 itemBuilder: (context, int index) {
@@ -238,7 +232,6 @@ class _DividasPGState extends State<DividasPG> {
         heroTag: null,
         elevation: 1.0,
         onPressed: () {
-          //Navigator.of(context).pop();
           Navigator.push(
               context,
               MaterialPageRoute<void>(

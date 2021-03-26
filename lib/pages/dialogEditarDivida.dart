@@ -74,12 +74,6 @@ class _dialogEditarDividaState extends State<dialogEditarDivida> {
     if (customControllerValor.text.isEmpty) {
       erros += "Insira um valor\n";
     }
-    if (customControllerNome.text.length > 30) {
-      erros += "Nome muito extenso\n";
-    }
-    if (customControllerNota.text.length > 50) {
-      erros += "Nota muito extensa";
-    }
     return erros;
   }
 
@@ -174,7 +168,7 @@ class _dialogEditarDividaState extends State<dialogEditarDivida> {
                 keyboardType: TextInputType.name,
                 controller: customControllerNome,
                 maxLength: 30,
-                maxLengthEnforced: true,
+                maxLengthEnforcement: MaxLengthEnforcement.enforced,
                 decoration: InputDecoration(
                     prefixIcon: Icon(Icons.person_rounded),
                     hintText: "Nome",
@@ -258,8 +252,7 @@ class _dialogEditarDividaState extends State<dialogEditarDivida> {
                 minLines: 1,
                 maxLines: 2,
                 maxLength: 50,
-
-                maxLengthEnforced: true,
+                maxLengthEnforcement: MaxLengthEnforcement.enforced,
                 textCapitalization: TextCapitalization.sentences,
                 keyboardType: TextInputType.name,
                 controller: customControllerNota,

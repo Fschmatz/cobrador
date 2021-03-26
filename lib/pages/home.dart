@@ -37,15 +37,13 @@ class _HomeState extends State<Home> {
     pageList.add(Configs());
 
     return Scaffold(
-        resizeToAvoidBottomPadding: false,
 
         //TOPO
         appBar: AppBar(
-            elevation: 5.0,
+            elevation: 4.0,
             title: Text(versaoNomeChangelog.nomeApp),
             centerTitle: true,
         ),
-
 
         body: IndexedStack(
           index: _currentIndex,
@@ -56,10 +54,6 @@ class _HomeState extends State<Home> {
         bottomNavigationBar: BottomNavigationBar(
             showSelectedLabels: true,
             showUnselectedLabels: false,
-
-          //MAIS TARDE REMOVER O FIXED QUANDO DESATIVaR O TESTE DB ?
-          //type: BottomNavigationBarType.fixed,
-
 
           currentIndex: _currentIndex,
             elevation: 5.0,

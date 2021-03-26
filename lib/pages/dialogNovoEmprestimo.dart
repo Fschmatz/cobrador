@@ -16,8 +16,6 @@ class dialogNovoEmprestimo extends StatefulWidget {
 
 class _dialogNovoEmprestimoState extends State<dialogNovoEmprestimo> {
   final dbEmp = emprestimosDAO.instance;
-
-  // DateTime dataInicial;
   DateTime dataEscolhida;
 
   @override
@@ -66,12 +64,6 @@ class _dialogNovoEmprestimoState extends State<dialogNovoEmprestimo> {
     }
     if (customControllerValor.text.isEmpty) {
       erros += "Insira um valor\n";
-    }
-    if (customControllerNome.text.length > 30) {
-      erros += "Nome muito extenso\n";
-    }
-    if (customControllerNota.text.length > 50) {
-      erros += "Nota muito extensa";
     }
     return erros;
   }
@@ -141,10 +133,8 @@ class _dialogNovoEmprestimoState extends State<dialogNovoEmprestimo> {
                     } else {
                     showAlertDialogErros(context);
                     }
+
                   },
-
-
-
                 child: Icon(
                   Icons.save_outlined,
                   size: 26.0,
@@ -166,8 +156,7 @@ class _dialogNovoEmprestimoState extends State<dialogNovoEmprestimo> {
 
               TextField(
                 maxLength: 30,
-                maxLengthEnforced: true,
-
+                maxLengthEnforcement: MaxLengthEnforcement.enforced,
                 textCapitalization: TextCapitalization.sentences,
                 controller: customControllerNome,
                 autofocus: true,
@@ -250,7 +239,7 @@ class _dialogNovoEmprestimoState extends State<dialogNovoEmprestimo> {
 
               TextField(
                 maxLength: 50,
-                maxLengthEnforced: true,
+                maxLengthEnforcement: MaxLengthEnforcement.enforced,
                 minLines: 1,
                 maxLines: 2,
                 textCapitalization: TextCapitalization.sentences,

@@ -1,7 +1,7 @@
 class versaoNomeChangelog{
 
   //se mudar o nome não esquecer de alterar, no manifesto
-  static String versaoApp = "2.0";
+  static String versaoApp = "2.2";
   static String nomeApp = "Cobrador Fschmtz";
 
 
@@ -10,15 +10,21 @@ class versaoNomeChangelog{
   
 Versão Atual:  
   
+2.2
+- Update Flutter 2.0
+- Correções
+  ''';
+
+  static String changelog = '''
+
+2.1
+- Correções
+
 2.0
 - Editar itens finalizado
 - Correções
 - Ícone novo
 - Adicionado Tutorial
-  ''';
-
-
-  static String changelog = '''
 
 1.9
 - Adicionados checks para todos os

@@ -13,8 +13,6 @@ class dialogNovaDivida extends StatefulWidget {
 
 class _dialogNovaDividaState extends State<dialogNovaDivida> {
   final dbDividas = dividasDAO.instance;
-
-  // DateTime dataInicial;
   DateTime dataEscolhida;
 
   @override
@@ -64,12 +62,6 @@ class _dialogNovaDividaState extends State<dialogNovaDivida> {
     if (customControllerValor.text.isEmpty) {
       erros += "Insira um valor\n";
     }
-    if (customControllerNome.text.length > 30) {
-      erros += "Nome muito extenso\n";
-    }
-    if (customControllerNota.text.length > 50) {
-      erros += "Nota muito extensa";
-    }
     return erros;
   }
 
@@ -115,9 +107,7 @@ class _dialogNovaDividaState extends State<dialogNovaDivida> {
         DateFormat("dd/MM/yyyy").format(dataEscolhida).toString();
 
     return Scaffold(
-      //resizeToAvoidBottomInset:false,
       appBar: AppBar(title: Text('Nova Dívida'),
-
           actions: <Widget>[
         Padding(
           padding: EdgeInsets.only(right: 20.0),
@@ -157,7 +147,7 @@ class _dialogNovaDividaState extends State<dialogNovaDivida> {
 
               TextField(
                 maxLength: 30,
-                maxLengthEnforced: true,
+                maxLengthEnforcement: MaxLengthEnforcement.enforced,
                 textCapitalization: TextCapitalization.sentences,
                 keyboardType: TextInputType.name,
                 controller: customControllerNome,
@@ -242,7 +232,7 @@ class _dialogNovaDividaState extends State<dialogNovaDivida> {
 
               TextField(
                 maxLength: 50,
-                maxLengthEnforced: true,
+                maxLengthEnforcement: MaxLengthEnforcement.enforced,
                 minLines: 1,
                 maxLines: 2,
                 textCapitalization: TextCapitalization.sentences,
@@ -264,7 +254,6 @@ class _dialogNovaDividaState extends State<dialogNovaDivida> {
                   fontSize: 19,
                 ),
               ),
-
             ],
           ),
         ),
